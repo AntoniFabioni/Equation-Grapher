@@ -47,3 +47,5 @@ def f(x):
 
 drawAxes()
 drawGrid()
+
+turtle.exitonclick()
