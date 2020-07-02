@@ -3,9 +3,13 @@ import matplotlib as plt
 import turtle
 
 t = turtle.Turtle()
+
+# 1 to 10 ramps up speed, but 0 is fastest speed.
 t.speed(0)
 
 width, height = 400, 400
+
+# How many units are the gridlines spaced apart?
 gridSpacing = 10
 
 def drawAxes():
@@ -48,4 +52,5 @@ def f(x):
 drawAxes()
 drawGrid()
 
+# Wait until click to dismiss the graph.
 turtle.exitonclick()
