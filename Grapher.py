@@ -12,6 +12,9 @@ width, height = 400, 400
 # How many units are the gridlines spaced apart?
 gridSpacing = 10
 
+def f(x):
+    return (150 / (1 + np.exp(20 - x / 4)) - 60) - (120 / (1 + np.exp(30 + x / 2)) - 20)
+
 def drawAxes():
     t.color('blue')
     t.pensize(3)
@@ -46,11 +49,26 @@ def drawGrid():
         t.goto(-width/2 + adjustment, -height/2)
         adjustment += gridSpacing
 
-def f(x):
-    return x
+def drawGraph(x1, x2):
+    x1 = int(min(x1, x2))
+    x2 = int(max(x1, x2))
+
+    t.penup()
+    t.pensize(3)
+    t.pencolor('red')
+    y = 0
+    t.penup
+
+    for x in range(x1, x2 + 1):
+        y = f(x)
+
+        if abs(y) <= height / 2:
+            t.goto(x, y)
+            t.pendown()
 
 drawAxes()
 drawGrid()
+drawGraph(-width / 2, width / 2)
 
 # Wait until click to dismiss the graph.
 turtle.exitonclick()
