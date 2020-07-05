@@ -54,13 +54,13 @@ def drawGrid():
         t.goto(-width/2 + adjustment, -height/2)
         adjustment += gridSpacing
 
-def drawGraph(f, x1, x2):
+def drawGraph(f, x1, x2, colour='red'):
     x1 = int(min(x1, x2))
     x2 = int(max(x1, x2))
 
     t.penup()
     t.pensize(3)
-    t.pencolor('red')
+    t.pencolor(colour)
     y = 0
     t.penup
 
@@ -74,7 +74,7 @@ def drawGraph(f, x1, x2):
 drawAxes()
 drawGrid()
 drawGraph(f, -width / 2, width / 2)
-drawGraph(g, -width / 2, width / 2)
+drawGraph(g, -width / 2, width / 2, 'green')
 
 # Wait until click to dismiss the graph.
 turtle.exitonclick()
