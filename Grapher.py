@@ -18,7 +18,7 @@ def f(x):
     return (150 / (1 + np.exp(20 - x / 4)) - 60) - (120 / (1 + np.exp(30 + x / 2)) - 20)
 
 def g(x):
-    return (120 / (1 + np.exp(30 - x / 4)) - 60) - (150 / (1 + np.exp(40 + x / 2)) - 30)
+    return (120 / (1 + np.exp(30 - x / 4)) - 60) - (150 / (1 + np.exp(40 + x / 2)) - 40)
 
 def drawAxes():
     t.color('blue')
