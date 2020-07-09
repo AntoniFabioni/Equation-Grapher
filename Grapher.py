@@ -10,7 +10,7 @@ t.speed(0)
 width, height = 400, 400
 
 # How many units are the gridlines spaced apart?
-gridSpacing = 10
+gridSpacing = 20
 
 # Any function y = f(x) will work here.
 def f(x):
